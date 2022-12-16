@@ -1,0 +1,151 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app{
+  display: flex;
+  background-color: rgb(11, 11, 49);
+  height: 150vh;
+  color: white;
+}
+.main{
+  width: 75%;
+  background: linear-gradient(rgb(8, 8, 23, 0.456), rgb(5, 5, 52, 0.65)), url(./asset/millioniare.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.start{
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+.start{
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.pyramid{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.moneylist.active{
+  background-color: teal;
+  padding: 2px;
+  border-radius: 20px;
+}
+.moneylist{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.moneylistItemnumber{
+  font-size: 20px;
+  width: 90px;
+  /* margin-left: 20px; */
+}
+.moneylistItemamount{
+  font-size: 20px;
+  width: 50px;
+  /* margin-left: 20px; */
+}
+.topContainer{
+  height: 50vh;
+  position: relative;
+
+}
+.timer{
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  bottom: 30px;
+  left: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.bottomContainer{
+  height: 50vh;
+}
+.trivia{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.question{
+  border-radius: 20px;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  background: linear-gradient(black, blue);
+  color: white;
+  font-size: 20px;
+}
+.answers{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.answer{
+  background-color: rgb(5, 5, 70);
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 3px solid white;
+  margin: 10px;
+}
+.answer:hover, .answer.active{
+  background: mediumblue;
+}
+.answer.correct{
+  animation: correct 3s ease-in-out forwards;
+}
+
+
+@keyframes correct{
+  0%, 22%, 42%, 60%{
+    background: mediumblue;
+  }
+  20%, 40%{
+    background:linear-gradient(black, blue) ;
+  }
+  62%, 100%{
+    background: green;
+  }
+}
+.answer.wrong{
+  animation: wrong 3s ease-in-out forwards;
+}
+
+@keyframes wrong{
+  0%, 22%, 42%, 60%{
+    background: mediumblue;
+  }
+  20%, 40%{
+    background:linear-gradient(black, blue) ;
+  }
+  62%, 100%{
+    background: crimson;
+  }
+}
